@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <link rel='stylesheet' href="{% static 'Belt/css/main.css' %}" media="screen" title="no title" charset="utf-8">
+        <title>Welcome!</title>
+    </head>
+    <body>
+        <h1>Welcome!<h1>
+        <div class="wrapper">
+            <div class="register">
+                <form action="register/" method='POST'>
+                    {% csrf_token %}
+                    <strong>Register</strong>
+                    <label for="name">Name:<input type="text" name="name" id="name"></label>
+                    <p></p>
+                    <label for="alias">Alias:<input type="text" name="alias" id="alias"></label>
+                    <p></p>
+                    <label for="email">Email:<input type="text" name="email" id="email"></label>
+                    <p></p>
+                    <password for="password">Password:<input type="text"name="password" id="password"></password>
+                    <p></p>
+                    <password for="confirmPW">Confirm Password:<input type="text" name="confirmPW" id="confirmPW"></password>
+                    <p></p>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+            <div class="login">
+                    <form action='login/' method='post'>
+                        {% csrf_token %}
+                        <strong>Login</strong>
+                        <label for="email">Email:<input type="text" name="email" id="email"></label>
+                        <p></p>
+                        <label for="password">Password:<input type="text" name="password" id="password"></label>
+                        <p></p>
+                        <p></p>
+                        <input type="submit" value="Login">
+                    </form>              
+            </div>
+        </div>
+    </body>
+</html>

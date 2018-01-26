@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <title>Book Home</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'Belt/css/main.css' %}" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="top">
+                <div class="welcome"><strong>Welcome, {{belt.name}}!</strong>
+                </div>
+                <div class="tRight">
+                    <div class="AddBook">
+                        <a href="/add" type="button" class="btn btn-link">Add book and review</a>
+                    </div>
+                    <div class="logout">
+                        <a href="/logout" type="button" class="btn btn-link">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="left"><h2>Recent Book Reviews</h2>
+                    <!-- <table> -->
+                     <!-- <tr>
+                            <th class='col-md-1'>id</th>
+                            <th class='col-md-2'>title</th>
+                            <th class='col-md-3'>Date:</th>
+                        </tr>  -->
+                        {% for review in newest %}
+                            <a href="/title/{{review.book_obj.id}}">{{review.book_obj.name}}</a>
+                        <!-- <tr> -->
+                            
+                            <!-- <td class='col-md-1'>{{ review.book_obj.id}}</td>
+                            <td class='col-md-2'>{{ review.book_obj.title}}</td>
+                            <td class='col-md-2'>{{ review.created_at }}</td> -->
+                        <!-- </tr> -->
+                        {% endfor %}
+                    <!-- </table> -->
+                
+                    <!-- <!-- {% for book in newest %} -->
+                    <!-- Title: {{review.book_obj.id}}{{review.book_obj.name}}
+                    Rating: {{review.rating}}
+                    {{review.reviewer.first_name}} says: {{review.content}}
+                    {{review.created_at}}
+                {% endfor %} -->
+                </div>
+                <div class="right"><strong>Other Books With Reviews</strong></div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+<!-- <h5 class="mb-1">Title: <a href="/title/{{review.book_obj.id}}">{{review.book_obj.name}}</a></h5>
+<small class="text-muted">Posted on {{review.created_at}}</small>                    
+<h5 class="mb-1">Rating: {{review.rating}} starts</h5>
+<p class="mb-1">{{review.reviewer.first_name}} says: {{review.content}}</p>
+
+<h2>Other Books with reviews:</h2>
+{% for reviews in the_rest %}
+<h5 class="mb-1">Title: {{reviews.book_obj.name}}</h5>
+{% endfor %} -->

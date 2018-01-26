@@ -1,0 +1,65 @@
+* {
+    background-color: beige;
+}
+.register {
+    display:inline-block;
+    border: solid;
+}
+.login {
+    display:inline-block;
+    border: solid;
+    vertical-align: top
+}
+
+
+/* belt/ || books.html */
+.wrapper{
+    height:auto;
+    width:100%;
+    display:inline-block;
+    background-color: lightcoral;
+}
+.top{
+    height: 100px;
+    width: 100%;
+    display:block;
+    background-color: lightcyan;
+}
+.welcome{
+display:inline-block;
+background-color: lightyellow;
+}
+.tRight{
+    display:inline-block;
+    background-color: lightgreen;
+    margin-left: 78%;
+    
+}
+.AddBook{
+    display:inline-block;
+    background-color: lightcoral;
+}
+.logout{
+    display:inline-block;
+    background-color: lightgray;
+    position: right;
+    padding-right: 0px;
+}
+.bottom{
+    display:block;
+    height: 400px;
+    width: 100%;
+    background-color: lightpink;
+}
+.left{
+    display:inline-block;
+    height: 100%;
+    width: 45%;
+    background-color: lightsalmon;
+}
+.right{
+    display:inline-block;
+    height: 100%;
+    width: 45%;
+    background-color: lightseagreen;
+}
